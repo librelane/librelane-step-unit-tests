@@ -1,3 +1,6 @@
+from verify import VerifyStep
+
+
 def handle(step):
-    # we need someway to verify output from openroad. without relying on openroad.
-    pass
+    step = VerifyStep(step.config, step.state_out)
+    step.start(step_dir=".")
