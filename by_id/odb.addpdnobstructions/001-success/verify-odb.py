@@ -14,8 +14,6 @@
 # limitations under the License.
 import sys
 
-import odb
-
 from openlane.scripts.odbpy.reader import click_odb, click
 from openlane.scripts.odbpy.defutil import parse_obstructions
 
