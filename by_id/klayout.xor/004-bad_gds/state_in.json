@@ -1,0 +1,18 @@
+{
+    "nl": null,
+    "pnl": null,
+    "def": null,
+    "lef": null,
+    "odb": null,
+    "sdc": null,
+    "sdf": null,
+    "spef": null,
+    "lib": null,
+    "spice": null,
+    "mag": null,
+    "gds": null,
+    "mag_gds": "./inverter.magic.gds",
+    "klayout_gds": "./inverter.klayout.gds",
+    "json_h": null,
+    "metrics": {}
+}
