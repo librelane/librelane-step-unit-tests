@@ -1,0 +1,4 @@
+#!/bin/bash
+for step in by_id/*; do
+    jdupes -X noext:ref -l $(find $step -type d | sort)
+done

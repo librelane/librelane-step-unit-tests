@@ -1,1 +1,18 @@
-{"nl": null, "pnl": null, "def": "./inverter.def", "lef": null, "odb": null, "sdc": null, "sdf": null, "spef": null, "lib": null, "spice": null, "mag": null, "gds": null, "mag_gds": null, "klayout_gds": null, "json_h": null, "metrics": {"design__instance__count": 8, "design__instance_unmapped__count": 0, "synthesis__check_error__count": 0, "design__die__bbox": "0.0 0.0 34.5 57.12", "design__core__bbox": "5.52 10.88 28.98 46.24", "design__io": 4, "design__die__area": 1970.64, "design__core__area": 829.546, "design__instance__area": 12.512, "design__instance__count__stdcell": 8, "design__instance__area__stdcell": 12.512, "design__instance__count__macros": 0, "design__instance__area__macros": 0, "design__instance__utilization": 0.015083, "design__instance__utilization__stdcell": 0.015083, "floorplan__design__io": 2, "design__io__hpwl": 37900, "timing__drv__floating__nets": "0", "timing__drv__floating__pins": "0", "design__instance__displacement__total": 0, "design__instance__displacement__mean": 0, "design__instance__displacement__max": 0, "route__wirelength__estimated": 15.03, "design__violations": 0, "antenna__violating__nets": 0, "antenna__violating__pins": 0, "antenna__count": 0, "route__net": 2, "route__net__special": 2, "route__drc_errors__iter:1": 0, "route__wirelength__iter:1": 10, "route__drc_errors": 0, "route__wirelength": 10, "route__vias": 6, "route__vias__singlecut": 6, "route__vias__multicut": 0}}
+{
+    "nl": null,
+    "pnl": null,
+    "def": "./inverter.def",
+    "lef": null,
+    "odb": null,
+    "sdc": null,
+    "sdf": null,
+    "spef": null,
+    "lib": null,
+    "spice": null,
+    "mag": null,
+    "gds": null,
+    "mag_gds": null,
+    "klayout_gds": null,
+    "json_h": null,
+    "metrics": {}
+}
