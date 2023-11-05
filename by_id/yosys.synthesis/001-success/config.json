@@ -69,7 +69,6 @@
     ],
     "LVS_INSERT_POWER_PINS": true,
     "SYNTH_FA_MAP": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/fa_map.v",
-    "PLACE_SITE_WIDTH": 0.46,
     "CLOCK_UNCERTAINTY_CONSTRAINT": 0.25,
     "SCL_GROUND_PINS": [
         "VGND",
@@ -171,7 +170,6 @@
     "FP_TAPCELL_DIST": 13,
     "EXTRA_LIBS": null,
     "EXTRA_GDS_FILES": null,
-    "PLACE_SITE_HEIGHT": 2.72,
     "MAX_TRANSITION_CONSTRAINT": 0.75,
     "SYNTH_DIRECT_WIRE_BUFFERING": true,
     "DEFAULT_CORNER": "nom_tt_025C_1v80",
