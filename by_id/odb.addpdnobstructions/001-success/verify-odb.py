@@ -22,6 +22,7 @@ from openlane.scripts.odbpy.defutil import parse_obstructions
 @click.option(
     "-O",
     "--obstructions",
+    multiple=True,
     required=True,
     help="Format: layer llx lly urx ury, (microns)",
 )
