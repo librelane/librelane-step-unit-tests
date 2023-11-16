@@ -23,7 +23,17 @@ def process_input(state_in, config, step_cls, pdk_root):
             break
 
     lef_reads = ""
-    for lef in tlef_list + config_parsed["CELL_LEFS"]:
+    extra_lefs = config_parsed["EXTRA_LEFS"] or []
+    macros_lefs = []
+    if config_parsed["MACROS"]:
+        macros_lefs = [
+            lef
+            for macro in config_parsed["MACROS"].keys()
+            for lef in config_parsed["MACROS"][macro].lef
+        ]
+    lefs = tlef_list + config_parsed["CELL_LEFS"] + extra_lefs + macros_lefs
+    lefs = filter(lambda x: x != "__openlane_dummy_path", lefs)
+    for lef in lefs:
         lef_reads += f"read_lef {lef}; "
 
     with open("openroad_def2gds.tcl", "w", encoding="utf8") as f:

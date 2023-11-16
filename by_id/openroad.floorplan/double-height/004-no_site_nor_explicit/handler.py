@@ -7,7 +7,7 @@ def handle(step, exception):
         [
             "grep",
             "-E",
-            f"ROW\\s*+\\w+\\s*unithddbl",
+            "ROW\\s*+\\w+\\s*unithddbl",
             os.path.join(step.step_dir, "spm.def"),
         ],
     )
