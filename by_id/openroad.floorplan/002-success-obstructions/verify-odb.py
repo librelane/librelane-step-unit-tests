@@ -14,7 +14,7 @@
 # limitations under the License.
 import sys
 
-from openlane.scripts.odbpy.reader import click_odb, click
+from reader import click_odb, click
 
 
 @click.command("verify_obstructions")

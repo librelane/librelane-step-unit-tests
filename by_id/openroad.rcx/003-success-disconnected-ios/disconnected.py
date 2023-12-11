@@ -17,7 +17,7 @@
 
 from collections import namedtuple
 
-from openlane.scripts.odbpy.reader import click_odb, click
+from reader import click_odb, click
 
 
 @click.option("--unannotated-file")

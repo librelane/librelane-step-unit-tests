@@ -1,27 +1,41 @@
+import os
 import subprocess
+
+from openlane.common import get_script_dir
 
 
 def handle(step):
-
     print(step.state_out["spef"])
+
+    env = os.environ.copy()
+    env[
+        "PYTHONPATH"
+    ] = f"{env.get('PYTHONPATH', '')}:{os.path.join(get_script_dir(), 'odbpy')}"
     for corner in ["nom", "min", "max"]:
+        print(f"--- Corner {corner} --- ")
         spef_file = step.state_out["spef"][f"{corner}_*"]
         with open("run_sta.tcl", "w") as f:
-            lib = step.config["LIB"]["*_tt_025C_1v80"][0]
-            f.write(f"read_liberty {lib}\n")
-            f.write(f"read_verilog {step.state_out['nl']}\n")
-            f.write("read_verilog ./aes_example.v\n")
-            f.write("link_design user_project_wrapper\n")
-            f.write(f"read_spef {spef_file}\n")
-            f.write(f"read_spef -path mprj ./aes_example.{corner}.spef\n")
-            f.write("report_parasitic_annotation -report_unannotated > out.log\n")
+            f.write(
+                open("run_sta.tcl.tpl")
+                .read()
+                .format(
+                    lib=step.config["LIB"]["*_tt_025C_1v80"][0],
+                    nl=step.state_out["nl"],
+                    spef_file=spef_file,
+                    corner=corner,
+                )
+            )
 
-        result = subprocess.run(["sta", "-exit", "run_sta.tcl"], capture_output=True)
-
-        if result.stderr:
-            for line in result.stderr.decode("utf-8").split("\n"):
-                print(line)
+        print("=== Running STA ===")
+        result = subprocess.run(
+            ["sta", "-exit", "run_sta.tcl"],
+            stderr=subprocess.STDOUT,
+            encoding="utf8",
+        )
+        print(result.stdout)
         assert result.returncode == 0, f"Error encounted during reading {spef_file}"
+
+        print("=== Running Check ===")
         result = subprocess.run(
             [
                 "openroad",
@@ -32,10 +46,8 @@ def handle(step):
                 "--unannotated-file",
                 "out.log",
             ],
-            capture_output=True,
+            stderr=subprocess.STDOUT,
+            env=env,
         )
-
-        if result.stderr:
-            for line in result.stderr.decode("utf-8").split("\n"):
-                print(line)
+        print(result.stdout)
         assert result.returncode == 0, "Some nets were not properly annotated"
