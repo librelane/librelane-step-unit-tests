@@ -4,7 +4,6 @@
   "PRIMARY_SIGNOFF_TOOL": "magic",
   "CELL_MAGLEFS": [
     "pdk_dir::libs.ref/sky130_fd_sc_hd/maglef/sky130_ef_sc_hd__decap_12.mag",
-    "pdk_dir::libs.ref/sky130_fd_sc_hd/maglef/sky130_ef_sc_hd__fakediode_2.mag",
     "pdk_dir::libs.ref/sky130_fd_sc_hd/maglef/sky130_ef_sc_hd__fill_12.mag",
     "pdk_dir::libs.ref/sky130_fd_sc_hd/maglef/sky130_ef_sc_hd__fill_4.mag",
     "pdk_dir::libs.ref/sky130_fd_sc_hd/maglef/sky130_ef_sc_hd__fill_8.mag",
@@ -486,7 +485,6 @@
   "PNR_EXCLUSION_CELL_LIST": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/drc_exclude.cells",
   "CELL_SPICE_MODELS": [
     "pdk_dir::libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__decap_12.spice",
-    "pdk_dir::libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fakediode_2.spice",
     "pdk_dir::libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_12.spice",
     "pdk_dir::libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_4.spice",
     "pdk_dir::libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_8.spice",
@@ -642,7 +640,6 @@
   "CLOCK_TRANSITION_CONSTRAINT": 0.15,
   "CELL_MAGS": [
     "pdk_dir::libs.ref/sky130_fd_sc_hd/mag/sky130_ef_sc_hd__decap_12.mag",
-    "pdk_dir::libs.ref/sky130_fd_sc_hd/mag/sky130_ef_sc_hd__fakediode_2.mag",
     "pdk_dir::libs.ref/sky130_fd_sc_hd/mag/sky130_ef_sc_hd__fill_12.mag",
     "pdk_dir::libs.ref/sky130_fd_sc_hd/mag/sky130_ef_sc_hd__fill_4.mag",
     "pdk_dir::libs.ref/sky130_fd_sc_hd/mag/sky130_ef_sc_hd__fill_8.mag",
