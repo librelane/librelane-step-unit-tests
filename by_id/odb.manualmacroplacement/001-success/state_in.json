@@ -1,0 +1,18 @@
+{
+    "nl": null,
+    "pnl": null,
+    "def": "./manual_macro_placement_test.def",
+    "lef": null,
+    "odb": "./manual_macro_placement_test.odb",
+    "sdc": null,
+    "sdf": null,
+    "spef": null,
+    "lib": null,
+    "spice": null,
+    "mag": null,
+    "gds": null,
+    "mag_gds": null,
+    "klayout_gds": null,
+    "json_h": null,
+    "metrics": {}
+}

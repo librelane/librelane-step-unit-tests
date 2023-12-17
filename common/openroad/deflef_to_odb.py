@@ -25,23 +25,27 @@ def process_input(state_in, config, step_cls, pdk_root):
     lef_reads = ""
     extra_lefs = config_parsed["EXTRA_LEFS"] or []
     macros_lefs = []
-    if config_parsed["MACROS"]:
-        macros_lefs = [
-            lef
-            for macro in config_parsed["MACROS"].keys()
-            for lef in config_parsed["MACROS"][macro].lef
-        ]
+    if macros := config_parsed["MACROS"]:
+        for _, info in macros.items():
+            for lef in info.lef:
+                macros_lefs.append(lef)
+
     lefs = tlef_list + config_parsed["CELL_LEFS"] + extra_lefs + macros_lefs
     lefs = filter(lambda x: x != "__openlane_dummy_path", lefs)
     for lef in lefs:
+        print(repr(lef))
         lef_reads += f"read_lef {lef}; "
 
-    with open("openroad_def2gds.tcl", "w", encoding="utf8") as f:
+    with open("openroad_def2odb.tcl", "w", encoding="utf8") as f:
         f.write(f"{lef_reads} read_def {def_in}; write_db {odb_out};")
 
-    subprocess.check_output(
-        ["openroad", "-exit", "openroad_def2gds.tcl"],
-        stderr=subprocess.STDOUT,
-    )
+    try:
+        subprocess.check_output(
+            ["openroad", "-exit", "openroad_def2odb.tcl"],
+            stderr=subprocess.STDOUT,
+        )
+    except subprocess.CalledProcessError as e:
+        print(e.stdout)
+        raise e from None
 
     return state_in, config_parsed
