@@ -1,7 +1,32 @@
 import os
 import subprocess
+from typing import List
 
 from openlane.common import get_script_dir
+from openlane.steps.odb import OdbpyStep
+from openlane.steps.step import StepError
+
+
+class CheckDisconnectedStep(OdbpyStep):
+    id = "CheckDisconnected"
+    name = "Check Disconnected"
+    config_vars = []
+
+    outputs = []
+
+    def get_script_path(self):
+        return os.path.join(
+            os.path.abspath(os.path.dirname(__file__)), "disconnected.py"
+        )
+
+    def get_command(self) -> List[str]:
+        return super().get_command() + [
+            "--unannotated-file",
+            "out.log",
+        ]
+
+    def get_subcommand(self) -> List[str]:
+        return []
 
 
 def handle(step):
@@ -36,18 +61,10 @@ def handle(step):
         assert result.returncode == 0, f"Error encounted during reading {spef_file}"
 
         print("=== Running Check ===")
-        result = subprocess.run(
-            [
-                "openroad",
-                "-exit",
-                "-python",
-                "./disconnected.py",
-                step.state_out["odb"],
-                "--unannotated-file",
-                "out.log",
-            ],
-            stderr=subprocess.STDOUT,
-            env=env,
-        )
-        print(result.stdout)
-        assert result.returncode == 0, "Some nets were not properly annotated"
+        check_exception = None
+        try:
+            step = CheckDisconnectedStep(step.config, step.state_out)
+            step.start(step_dir=os.path.join(".", corner), _no_rule=True)
+        except StepError as e:
+            check_exception = e
+        assert check_exception is None, "Some nets were not properly annotated"
