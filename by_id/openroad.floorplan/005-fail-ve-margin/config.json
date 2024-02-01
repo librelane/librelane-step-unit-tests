@@ -51,7 +51,7 @@
   "RT_MAX_LAYER": "met5",
   "PNR_SDC_FILE": null,
   "PDN_MACRO_CONNECTIONS": null,
-  "DIE_AREA": "0 0 34.5 57.12",
+  "DIE_AREA": null,
   "GRT_LAYER_ADJUSTMENTS": [
     0.99,
     0,
