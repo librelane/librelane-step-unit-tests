@@ -33,7 +33,6 @@ def process_input(state_in, config, step_cls, pdk_root):
     lefs = tlef_list + config_parsed["CELL_LEFS"] + extra_lefs + macros_lefs
     lefs = filter(lambda x: x != "__openlane_dummy_path", lefs)
     for lef in lefs:
-        print(repr(lef))
         lef_reads += f"read_lef {lef}; "
 
     with open("openroad_def2odb.tcl", "w", encoding="utf8") as f:

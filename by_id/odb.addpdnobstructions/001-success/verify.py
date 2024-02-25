@@ -22,7 +22,6 @@ class VerifyStep(OdbpyStep):
         return self.config_vars[0]
 
     def get_command(self) -> List[str]:
-        print("COMMANDDDDD")
         command = super().get_command()
         if obstructions := self.config[self.config_vars[0].name]:
             for obstruction in obstructions:
