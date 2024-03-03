@@ -3,7 +3,6 @@ import subprocess
 
 
 def handle(step):
-
     for spef_file in step.state_out["spef"].values():
         with open("run_openroad.tcl", "w") as f:
             f.write(f"read_lef {step.config['TECH_LEFS']['nom_*']}\n")
