@@ -1,8 +1,6 @@
-import re
-
-
-def handle(step, exception, caplog):
+def handle(step, exception, caplog, openroad_alerts):
     assert exception is not None, "Didn't fail on zero utilization"
-    error = r"\[ERROR IFP-0036].*"
-    error_match = [match for match in caplog.text.split("\n") if re.match(error, match)]
-    assert error_match != [], f"{error} not found"
+    error = "IFP-0036"
+    assert error in [
+        alert.code for alert in openroad_alerts
+    ], f"No alerts for {error} found"

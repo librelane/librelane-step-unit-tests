@@ -1,12 +1,6 @@
-import re
-
-
-def handle(step, exception, caplog):
+def handle(step, exception, caplog, openroad_alerts):
     assert exception is not None, "Didn't fail on negative core margin"
-    # [ERROR STA-0414] -core_space '-4.6000000000000005' is not a positive float
-    error_match = [
-        match
-        for match in caplog.text.split("\n")
-        if re.match(r"\[ERROR STA-0414\].*is not a positive float.*", match)
-    ]
-    assert error_match != [], "Error STA-0414 not found"
+    error = "STA-0414"
+    assert error in [
+        alert.code for alert in openroad_alerts
+    ], f"No alerts for {error} found"

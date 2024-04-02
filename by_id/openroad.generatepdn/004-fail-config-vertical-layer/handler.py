@@ -1,8 +1,6 @@
-import re
-
-
-def handle(step, exception, caplog):
+def handle(step, exception, caplog, openroad_alerts):
     assert exception is not None, "Check nodes didn't catch missing PDN"
-    error_regex = r".*Unable to find \S+ layer.*"
-    matches = [line for line in caplog.text.split("\n") if re.match(error_regex, line)]
-    assert matches != [], f"Didn't find {error_regex} in log"
+    error = "PDN-1023"
+    assert error in [
+        alert.code for alert in openroad_alerts
+    ], f"No alerts for {error} found"

@@ -1,13 +1,8 @@
-import re
-
-
-def handle(step, exception, caplog):
+def handle(step, exception, caplog, openroad_alerts):
     assert (
         exception is not None
     ), "Fill insertion didn't fail on bad fill cell defintion"
-    errors = [
-        line
-        for line in caplog.text.split("\n")
-        if re.match(r"\[ERROR DPL-0002\] could not fill gap of size.*", line)
-    ]
-    assert errors, "ERROR DPL-0002 could not fill gap of size .. is not found"
+    error = "DPL-0002"
+    assert error in [
+        alert.code for alert in openroad_alerts
+    ], f"No alerts for {error} found"
