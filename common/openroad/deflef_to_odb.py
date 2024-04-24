@@ -34,9 +34,13 @@ def process_input(state_in, config, step_cls, pdk_root):
     lefs = filter(lambda x: x != "__openlane_dummy_path", lefs)
     for lef in lefs:
         lef_reads += f"read_lef {lef}; "
+        
+    guides_read = ""
+    if os.path.exists("guides"):
+        guides_read = "read_guides guides; "
 
     with open("openroad_def2odb.tcl", "w", encoding="utf8") as f:
-        f.write(f"{lef_reads} read_def {def_in}; write_db {odb_out};")
+        f.write(f"{lef_reads} read_def {def_in}; {guides_read} write_db {odb_out};")
 
     try:
         subprocess.check_output(
