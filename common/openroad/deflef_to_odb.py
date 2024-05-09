@@ -34,7 +34,7 @@ def process_input(state_in, config, step_cls, pdk_root):
     lefs = filter(lambda x: x != "__openlane_dummy_path", lefs)
     for lef in lefs:
         lef_reads += f"read_lef {lef}; "
-        
+
     guides_read = ""
     if os.path.exists("guides"):
         guides_read = "read_guides guides; "
