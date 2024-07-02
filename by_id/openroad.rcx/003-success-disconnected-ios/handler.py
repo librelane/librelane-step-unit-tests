@@ -33,9 +33,9 @@ def handle(step):
     print(step.state_out["spef"])
 
     env = os.environ.copy()
-    env[
-        "PYTHONPATH"
-    ] = f"{env.get('PYTHONPATH', '')}:{os.path.join(get_script_dir(), 'odbpy')}"
+    env["PYTHONPATH"] = (
+        f"{env.get('PYTHONPATH', '')}:{os.path.join(get_script_dir(), 'odbpy')}"
+    )
     for corner in ["nom", "min", "max"]:
         print(f"--- Corner {corner} --- ")
         spef_file = step.state_out["spef"][f"{corner}_*"]
