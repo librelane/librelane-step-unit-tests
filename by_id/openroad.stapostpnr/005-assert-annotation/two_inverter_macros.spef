@@ -1,0 +1,82 @@
+*SPEF "ieee 1481-1999"
+*DESIGN "two_inverter_macros"
+*DATE "11:11:11 Fri 11 11, 1111"
+*VENDOR "OpenRCX"
+*PROGRAM "Parallel Extraction"
+*VERSION "1.0"
+*DESIGN_FLOW "NAME_SCOPE LOCAL" "PIN_CAP NONE"
+*DIVIDER /
+*DELIMITER :
+*BUS_DELIMITER []
+*T_UNIT 1 NS
+*C_UNIT 1 PF
+*R_UNIT 1 OHM
+*L_UNIT 1 HENRY
+
+*NAME_MAP
+*3 in
+*4 out
+*5 glue
+*6 inv_1
+*7 inv_2
+
+*PORTS
+in I
+out O
+
+*D_NET *3 0.11415
+*CONN
+*P in I
+*I *6:in I *D inverter
+*CAP
+1 in 0.00104149
+2 *6:in 0.000371934
+3 *3:16 0.0387343
+4 *3:15 0.0383624
+5 *3:13 0.0168071
+6 *3:12 0.0178486
+7 *6:in *5:13 0.000984079
+*RES
+1 in *3:12 30.2321 
+2 *3:12 *3:13 348.321 
+3 *3:13 *3:15 4.5 
+4 *3:15 *3:16 796.089 
+5 *3:16 *6:in 16.7054 
+*END
+
+*D_NET *4 0.0213103
+*CONN
+*P out O
+*I *7:out O *D inverter
+*CAP
+1 out 0.00591562
+2 *7:out 0.000484625
+3 *4:12 0.00591562
+4 *4:10 0.00425493
+5 *4:9 0.00473955
+*RES
+1 *7:out *4:9 14.4732 
+2 *4:9 *4:10 88.0179 
+3 *4:10 *4:12 4.5 
+4 *4:12 out 122.857 
+*END
+
+*D_NET *5 0.442845
+*CONN
+*I *7:in I *D inverter
+*I *6:out O *D inverter
+*CAP
+1 *7:in 3.34458e-05
+2 *6:out 0.000484625
+3 *5:13 0.0056535
+4 *5:12 0.00562006
+5 *5:10 0.214792
+6 *5:9 0.215277
+7 *6:in *5:13 0.000984079
+*RES
+1 *6:out *5:9 14.4732 
+2 *5:9 *5:10 4461.3 
+3 *5:10 *5:12 4.5 
+4 *5:12 *5:13 120.795 
+5 *5:13 *7:in 0.678571 
+*END

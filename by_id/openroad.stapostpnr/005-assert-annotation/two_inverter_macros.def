@@ -1,0 +1,94 @@
+VERSION 5.7 ;
+   NAMESCASESENSITIVE ON ;
+   DIVIDERCHAR "/" ;
+   BUSBITCHARS "()" ;
+   DESIGN two_inverter_macros ;
+   TECHNOLOGY sky130A ;
+   UNITS DISTANCE MICRONS 1000 ;
+   DIEAREA ( 0 0 ) ( 6000000 500000 ) ;
+
+VIAS 2 ;
+   - via_260_260_hv
+      + RECT met1 ( -160 -130 ) ( 160 130 )
+      + RECT met2 ( -130 -160 ) ( 130 160 )
+      + RECT via ( -75 -75 ) ( 75 75 ) ;
+   - via4_1180_1180
+      + RECT met4 ( -590 -590 ) ( 590 590 )
+      + RECT met5 ( -710 -710 ) ( 710 710 )
+      + RECT via4 ( -400 -400 ) ( 400 400 ) ;
+END VIAS
+
+COMPONENTS 2 ;
+   - inv_2 inverter
+      + PLACED ( 100000 150000 ) N ;
+   - inv_1 inverter
+      + PLACED ( 100000 50000 ) N ;
+END COMPONENTS
+
+PINS 36 ;
+   - in + NET in
+     + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )        + PLACED ( 5999090 498000 ) N ;
+   - out + NET out
+     + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )        + PLACED ( 230 2000 ) N ;
+END PINS
+
+NONDEFAULTRULES 2 ;
+  - met2_width_280
+     + LAYER met1 WIDTH 140
+     + LAYER met3 WIDTH 300
+     + LAYER met4 WIDTH 300
+     + LAYER met5 WIDTH 1600
+     + LAYER li1 WIDTH 170
+     + LAYER met2 WIDTH 280 ;
+  - met2_width_260
+     + LAYER met1 WIDTH 140
+     + LAYER met3 WIDTH 300
+     + LAYER met4 WIDTH 300
+     + LAYER met5 WIDTH 1600
+     + LAYER li1 WIDTH 170
+     + LAYER met2 WIDTH 260 ;
+END NONDEFAULTRULES
+
+NETS 7 ;
+   - out ( PIN out ) ( inv_2 out )
+      + ROUTED met2 TAPERRULE met2_width_280  ( 230 140 ) ( * 3860 )
+      NEW met2  ( 230 4070 ) ( * 141040 )
+      NEW met2 TAPERRULE met2_width_260  ( 230 141240 ) ( * 141270 ) via_260_260_hv 
+       ( 98670 * ) via_260_260_hv 
+      NEW met2 TAPERRULE met2_width_260  ( 98670 141240 ) ( * 141300 )
+      NEW met2  ( 98670 141500 ) ( * 150480 )
+      NEW met2 ( 98670 150620 ) ( 100210 * ) ;
+   - glue ( inv_2 in ) ( inv_1 out )
+      + ROUTED met1  ( 101890 41310 ) via_260_260_hv 
+      NEW met2 TAPERRULE met2_width_260  ( 101890 41280 ) ( * 41340 )
+      NEW met2  ( 101890 41540 ) ( * 50520 )
+      NEW met2  ( 100350 50660 ) ( 101890 * )
+      NEW met1  ( 102090 41310 ) ( 5098410 * ) via_260_260_hv 
+      NEW met2 TAPERRULE met2_width_260  ( 5098410 41280 ) ( * 41340 )
+      NEW met2  ( 5098410 41540 ) ( * 176320 )
+      NEW met2  ( 5097790 176460 ) ( 5098410 * ) ;
+   - in ( PIN in ) ( inv_1 in )
+      + ROUTED met2 TAPERRULE met2_width_280  ( 5999090 496140 ) ( * 496530 )
+      NEW met2  ( 5997710 496740 ) ( 5999160 * )
+      NEW met2 TAPERRULE met2_width_280  ( 5999090 496950 ) ( * 499860 )
+      NEW met2  ( 5997710 483200 ) ( * 496600 )
+      NEW met2 TAPERRULE met2_width_260  ( 5997710 482940 ) ( * 483000 )
+      NEW met2  ( 5997710 482970 ) via_260_260_hv 
+      NEW met1  ( 5989630 482970 ) ( 5997510 * )
+      NEW met1  ( 5989430 482970 ) via_260_260_hv 
+      NEW met2 TAPERRULE met2_width_260  ( 5989430 482940 ) ( * 483000 )
+      NEW met2  ( 5989430 93220 ) ( * 482740 )
+      NEW met2 TAPERRULE met2_width_260  ( 5989430 92960 ) ( * 93020 )
+      NEW met2  ( 5989430 92990 ) via_260_260_hv 
+      NEW met1  ( 5098150 92990 ) ( 5989230 * )
+      NEW met1  ( 5097950 92990 ) via_260_260_hv 
+      NEW met2 TAPERRULE met2_width_260  ( 5097950 92960 ) ( * 93020 )
+      NEW met2  ( 5097950 80720 ) ( * 92760 )
+      NEW met2  ( 5097720 80580 ) ( 5097950 * )
+      NEW met2  ( 5097720 79970 ) ( * 80440 ) ;
+END NETS
+
+END DESIGN
+

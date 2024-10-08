@@ -1,0 +1,187 @@
+{
+    "CELL_BB_VERILOG_MODELS": [
+        "pdk_dir::libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd__blackbox.v",
+        "pdk_dir::libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd__blackbox_pp.v"
+    ],
+    "CELL_GDS": [
+        "pdk_dir::libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds"
+    ],
+    "CELL_LEFS": [
+        "pdk_dir::libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef",
+        "pdk_dir::libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef"
+    ],
+    "CELL_PAD_EXCLUDE": [
+        "sky130_fd_sc_hd__tap*",
+        "sky130_fd_sc_hd__decap*",
+        "sky130_ef_sc_hd__decap*",
+        "sky130_fd_sc_hd__fill*"
+    ],
+    "CELL_SPICE_MODELS": [
+        "pdk_dir::libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__decap_12.spice",
+        "pdk_dir::libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_12.spice",
+        "pdk_dir::libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_4.spice",
+        "pdk_dir::libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_8.spice",
+        "pdk_dir::libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice"
+    ],
+    "CELL_VERILOG_MODELS": [
+        "pdk_dir::libs.ref/sky130_fd_sc_hd/verilog/primitives.v",
+        "pdk_dir::libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v"
+    ],
+    "CLOCK_NET": null,
+    "CLOCK_PERIOD": 20,
+    "CLOCK_PORT": "clk",
+    "CLOCK_TRANSITION_CONSTRAINT": 0.15,
+    "CLOCK_UNCERTAINTY_CONSTRAINT": 0.25,
+    "CLOCK_WIRE_RC_LAYERS": null,
+    "DECAP_CELL": [
+        "sky130_fd_sc_hd__decap_3",
+        "sky130_fd_sc_hd__decap_4",
+        "sky130_fd_sc_hd__decap_6",
+        "sky130_fd_sc_hd__decap_8",
+        "sky130_ef_sc_hd__decap_12"
+    ],
+    "DEFAULT_CORNER": "nom_tt_025C_1v80",
+    "DEFAULT_MAX_TRAN": null,
+    "DESIGN_NAME": "two_inverter_macros",
+    "DIE_AREA": [
+        0,
+        0,
+        161,
+        111.52
+    ],
+    "DIODE_CELL": "sky130_fd_sc_hd__diode_2/DIODE",
+    "ENDCAP_CELL": "sky130_fd_sc_hd__decap_3",
+    "EXTRA_EXCLUDED_CELLS": null,
+    "EXTRA_GDS_FILES": null,
+    "EXTRA_LEFS": null,
+    "EXTRA_LIBS": null,
+    "EXTRA_SPEFS": null,
+    "EXTRA_SPICE_MODELS": null,
+    "EXTRA_VERILOG_MODELS": null,
+    "FALLBACK_SDC_FILE": "./base.sdc",
+    "FILL_CELL": [
+        "sky130_fd_sc_hd__fill*"
+    ],
+    "FP_DEF_TEMPLATE": null,
+    "FP_IO_HLAYER": "met3",
+    "FP_IO_VLAYER": "met2",
+    "FP_TAPCELL_DIST": 13,
+    "FP_TRACKS_INFO": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/tracks.info",
+    "GND_NETS": null,
+    "GND_PIN": "VGND",
+    "GPIO_PADS_LEF": [
+        "pdk_dir::libs.ref/sky130_fd_io/lef/sky130_fd_io.lef",
+        "pdk_dir::libs.ref/sky130_fd_io/lef/sky130_ef_io.lef"
+    ],
+    "GPIO_PADS_LEF_CORE_SIDE": [
+        "pdk_dir::libs.tech/openlane/custom_cells/lef/sky130_fd_io_core.lef",
+        "pdk_dir::libs.tech/openlane/custom_cells/lef/sky130_ef_io_core.lef"
+    ],
+    "GPIO_PADS_VERILOG": [
+        "pdk_dir::libs.ref/sky130_fd_io/verilog/sky130_ef_io.v"
+    ],
+    "GPIO_PAD_CELLS": [
+        "sky130_fd_io*",
+        "sky130_ef_io*"
+    ],
+    "IO_DELAY_CONSTRAINT": 20,
+    "LIB": {
+        "*_tt_025C_1v80": [
+            "pdk_dir::libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib"
+        ],
+        "*_ss_100C_1v60": [
+            "pdk_dir::libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib"
+        ],
+        "*_ff_n40C_1v95": [
+            "pdk_dir::libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib"
+        ]
+    },
+    "MACROS": {
+        "inverter": {
+            "instances": {
+                "inv_1": {},
+                "inv_2": {}
+            },
+            "gds": [
+                "dir::inverter.gds.gz"
+            ],
+            "lef": [
+                "dir::inverter.lef"
+            ],
+            "nl": [
+                "dir::./inverter.v.gz"
+            ],
+            "pnl": [
+                "dir::./inverter.v.gz"
+            ],
+            "spef": {
+                "*": [
+                    "dir::./inverter.spef"
+                ]
+            }
+        }
+    },
+    "MAX_CAPACITANCE_CONSTRAINT": 0.2,
+    "MAX_FANOUT_CONSTRAINT": 10,
+    "MAX_TRANSITION_CONSTRAINT": 0.75,
+    "OUTPUT_CAP_LOAD": 33.442,
+    "PDK": "sky130A",
+    "PDN_CONNECT_MACROS_TO_GRID": true,
+    "PDN_ENABLE_GLOBAL_CONNECTIONS": true,
+    "PDN_MACRO_CONNECTIONS": null,
+    "PLACE_SITE": "unithd",
+    "PNR_EXCLUDED_CELL_FILE": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/drc_exclude.cells",
+    "PNR_SDC_FILE": null,
+    "PRIMARY_GDSII_STREAMOUT_TOOL": "magic",
+    "RT_MAX_LAYER": "met4",
+    "RT_MIN_LAYER": "met1",
+    "SCL_GROUND_PINS": [
+        "VGND",
+        "VNB"
+    ],
+    "SCL_POWER_PINS": [
+        "VPWR",
+        "VPB"
+    ],
+    "SIGNAL_WIRE_RC_LAYERS": null,
+    "SIGNOFF_SDC_FILE": null,
+    "STA_CORNERS": [
+        "nom_tt_025C_1v80",
+        "nom_ss_100C_1v60",
+        "nom_ff_n40C_1v95",
+        "min_tt_025C_1v80",
+        "min_ss_100C_1v60",
+        "min_ff_n40C_1v95",
+        "max_tt_025C_1v80",
+        "max_ss_100C_1v60",
+        "max_ff_n40C_1v95"
+    ],
+    "STA_MACRO_PRIORITIZE_NL": true,
+    "STA_MAX_VIOLATOR_COUNT": null,
+    "STA_THREADS": null,
+    "STD_CELL_LIBRARY": "sky130_fd_sc_hd",
+    "SYNTH_BUFFER_CELL": "sky130_fd_sc_hd__buf_2/A/X",
+    "SYNTH_CLK_DRIVING_CELL": null,
+    "SYNTH_DRIVING_CELL": "sky130_fd_sc_hd__inv_2/Y",
+    "SYNTH_EXCLUDED_CELL_FILE": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/no_synth.cells",
+    "SYNTH_TIEHI_CELL": "sky130_fd_sc_hd__conb_1/HI",
+    "SYNTH_TIELO_CELL": "sky130_fd_sc_hd__conb_1/LO",
+    "TECH_LEFS": {
+        "nom_*": "pdk_dir::libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef",
+        "min_*": "pdk_dir::libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__min.tlef",
+        "max_*": "pdk_dir::libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__max.tlef"
+    },
+    "TIME_DERATING_CONSTRAINT": 5,
+    "TRISTATE_CELLS": [
+        "sky130_fd_sc_hd__ebuf*"
+    ],
+    "VDD_NETS": null,
+    "VDD_PIN": "VPWR",
+    "VDD_PIN_VOLTAGE": 1.8,
+    "WELLTAP_CELL": "sky130_fd_sc_hd__tapvpwrvgnd_1",
+    "WIRE_LENGTH_THRESHOLD": null,
+    "meta": {
+        "openlane_version": "2.0.7",
+        "step": "OpenROAD.STAPostPNR"
+    }
+}

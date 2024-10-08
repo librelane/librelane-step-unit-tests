@@ -1,0 +1,26 @@
+{
+    "nl": "./two_inverter_macros.v",
+    "pnl": null,
+    "pnl-sdf-friendly": null,
+    "pnl-npc": null,
+    "def": "./two_inverter_macros.def",
+    "lef": null,
+    "openroad-lef": null,
+    "odb": "./two_inverter_macros.odb",
+    "sdc": null,
+    "sdf": null,
+    "spef": {
+        "nom_*": "./two_inverter_macros.spef",
+        "min_*": "./two_inverter_macros.spef",
+        "max_*": "./two_inverter_macros.spef"
+    },
+    "lib": null,
+    "spice": null,
+    "mag": null,
+    "gds": null,
+    "mag_gds": null,
+    "klayout_gds": null,
+    "json_h": null,
+    "vh": null,
+    "metrics": {}
+}
