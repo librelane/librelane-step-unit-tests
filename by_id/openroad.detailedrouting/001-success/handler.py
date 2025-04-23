@@ -1,4 +1,4 @@
-from openlane.steps.checker import TrDRC
+from librelane.steps.checker import TrDRC
 
 
 def handle(step):

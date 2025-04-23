@@ -1,14 +1,14 @@
-# OpenLane 2.0.0+ Step Unit Tests
+# LibreLane Step Unit Tests
 
 These are per-step unit tests for OpenLane 2.
 
-Check the [OpenLane documentation](https://openlane2.readthedocs.io) for more
+Check the [LibreLane documentation](https://librelane.readthedocs.io) for more
 info on how this repository is organized- they are stored in a separate
 repository to keep clone sizes under control.
 
 # Issues and Contributions
 
-Please file issues at the [OpenLane 2 repository](https://github.com/efabless/openlane2).
+Please file issues at the [LibreLane repository](https://github.com/librelane/librelane).
 
 Pull requests for new tests and/or fixes for existing tests are appreciated.
 
@@ -17,7 +17,3 @@ Pull requests for new tests and/or fixes for existing tests are appreciated.
 If not otherwise explicitly stated by the desired file, the Apache License, v2.0.
 
 See 'License'.
-
-
-
-

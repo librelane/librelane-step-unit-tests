@@ -1,6 +1,6 @@
 def handle(step, exception):
-    from openlane.scripts.odbpy.exception_codes import METAL_LAYER_ERROR
-    from openlane.steps.step import StepError
+    from librelane.scripts.odbpy.exception_codes import METAL_LAYER_ERROR
+    from librelane.steps.step import StepError
 
     assert (
         type(exception) == StepError

@@ -32,7 +32,7 @@ def process_input(state_in, config, step_cls, pdk_root):
             for lef in config_parsed["MACROS"][macro].lef
         ]
     lefs = tlef_list + config_parsed["CELL_LEFS"] + extra_lefs + macros_lefs
-    lefs = filter(lambda x: x != "__openlane_dummy_path", lefs)
+    lefs = filter(lambda x: x != "__librelane_dummy_path", lefs)
     for lef in lefs:
         lef_reads += f"read_lef {lef}; "
 

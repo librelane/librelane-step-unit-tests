@@ -3,9 +3,9 @@ import os
 from typing import List, Optional, Tuple
 from decimal import Decimal
 
-from openlane.steps.odb import OdbpyStep
-from openlane.config import Variable
-from openlane.steps import TclStep
+from librelane.steps.odb import OdbpyStep
+from librelane.config import Variable
+from librelane.steps import TclStep
 
 
 class VerifyStep(OdbpyStep):
