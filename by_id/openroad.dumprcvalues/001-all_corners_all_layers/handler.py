@@ -4,7 +4,7 @@ from decimal import Decimal
 
 from parser import parse_report_file
 
-from openlane.common import Filter
+from librelane.common import Filter
 
 
 def compute_average_rc(

@@ -31,7 +31,7 @@ def process_input(state_in, config, step_cls, pdk_root):
                 macros_lefs.append(lef)
 
     lefs = tlef_list + config_parsed["CELL_LEFS"] + extra_lefs + macros_lefs
-    lefs = filter(lambda x: x != "__openlane_dummy_path", lefs)
+    lefs = filter(lambda x: x != "__librelane_dummy_path", lefs)
     for lef in lefs:
         lef_reads += f"read_lef {lef}; "
 

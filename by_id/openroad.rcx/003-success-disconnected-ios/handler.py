@@ -2,9 +2,9 @@ import os
 import subprocess
 from typing import List
 
-from openlane.common import get_script_dir
-from openlane.steps.odb import OdbpyStep
-from openlane.steps.step import StepError
+from librelane.common import get_script_dir
+from librelane.steps.odb import OdbpyStep
+from librelane.steps.step import StepError
 
 
 class CheckDisconnectedStep(OdbpyStep):

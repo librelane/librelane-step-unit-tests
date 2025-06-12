@@ -2,8 +2,8 @@ import os
 
 from typing import List, Tuple
 
-from openlane.steps.odb import OdbpyStep, AddPDNObstructions
-from openlane.steps.step import MetricsUpdate, ViewsUpdate
+from librelane.steps.odb import OdbpyStep, AddPDNObstructions
+from librelane.steps.step import MetricsUpdate, ViewsUpdate
 
 
 class VerifyStep(OdbpyStep):

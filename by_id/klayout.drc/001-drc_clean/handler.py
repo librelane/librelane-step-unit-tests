@@ -1,4 +1,4 @@
-from openlane.steps.checker import KLayoutDRC
+from librelane.steps.checker import KLayoutDRC
 
 
 def handle(step):

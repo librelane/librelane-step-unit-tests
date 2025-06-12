@@ -1,4 +1,4 @@
-from openlane.steps.checker import MagicDRC
+from librelane.steps.checker import MagicDRC
 
 
 def handle(step):

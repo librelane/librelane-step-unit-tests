@@ -1,9 +1,9 @@
 import pytest
-from openlane.steps.step import StepError
+from librelane.steps.step import StepError
 
 
 def handle(step):
-    from openlane.steps import Step
+    from librelane.steps import Step
 
     DRT = Step.factory.get("OpenROAD.DetailedRouting")
 

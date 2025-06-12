@@ -1,6 +1,6 @@
 import subprocess
 import json
-from openlane.common import GenericDictEncoder
+from librelane.common import GenericDictEncoder
 
 
 def handle(step):

@@ -1,8 +1,8 @@
 import os
 from typing import List, Literal
 
-from openlane.steps.odb import OdbpyStep
-from openlane.config import Variable
+from librelane.steps.odb import OdbpyStep
+from librelane.config import Variable
 
 
 class VerifyStep(OdbpyStep):

@@ -2,8 +2,8 @@ from typing import Optional, Tuple
 from decimal import Decimal
 
 
-from openlane.config.variable import Variable
-from openlane.common import GenericDict
+from librelane.config.variable import Variable
+from librelane.common import GenericDict
 
 
 def handle(step):
