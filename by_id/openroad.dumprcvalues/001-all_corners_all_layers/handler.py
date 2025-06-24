@@ -76,13 +76,8 @@ def post_process_averages(averaged_rc_data):
                 post_processed_results[corner][layer_type]["res"] = avg_res
 
             elif layer_type == "clock":
-                if horizontal_data["res"] != 0:
-                    post_processed_results[corner][layer_type]["res"] = horizontal_data[
-                        "res"
-                    ]
-                else:
-                    avg_res = (horizontal_data["res"] + vertical_data["res"]) / 2
-                    post_processed_results[corner][layer_type]["res"] = avg_res
+                avg_res = (horizontal_data["res"] + vertical_data["res"]) / 2
+                post_processed_results[corner][layer_type]["res"] = avg_res
 
                 avg_cap = (horizontal_data["cap"] + vertical_data["cap"]) / 2
                 post_processed_results[corner][layer_type]["cap"] = avg_cap
