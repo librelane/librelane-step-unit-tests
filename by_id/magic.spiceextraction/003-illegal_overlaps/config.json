@@ -1040,7 +1040,7 @@
   "MAGIC_EXT_USE_GDS": false,
   "MAGIC_GDS_POLYGON_SUBCELLS": false,
   "MAGIC_INCLUDE_GDS_POINTERS": false,
-  "MAGIC_NO_EXT_UNIQUE": false,
+  "MAGIC_EXT_UNIQUE": "all",
   "MAGIC_PDK_SETUP": "pdk_dir::libs.tech/magic/sky130A.tcl",
   "MAGIC_TECH": "pdk_dir::libs.tech/magic/sky130A.tech",
   "MAX_CAPACITANCE_CONSTRAINT": 0.2,
