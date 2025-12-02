@@ -95,7 +95,7 @@
     "CLOCK_PERIOD": 10,
     "SYNTH_CLK_DRIVING_CELL": null,
     "TIME_DERATING_CONSTRAINT": 5,
-    "PL_TIME_DRIVEN": true,
+    "PL_TIMING_DRIVEN": true,
     "CLOCK_PORT": null,
     "CTS_CLK_BUFFERS": [
         "sky130_fd_sc_hd__clkbuf_8",
