@@ -3,7 +3,7 @@ from PIL import Image
 
 
 def handle(step):
-    image = os.path.join(step.step_dir, "out.png")
+    image = os.path.join(step.step_dir, "spm.png")
 
     with Image.open(image) as im:
         im.verify()
