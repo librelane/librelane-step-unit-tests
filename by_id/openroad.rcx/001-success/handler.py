@@ -6,7 +6,7 @@ def handle(step):
     for spef_file in step.state_out["spef"].values():
         with open("run_openroad.tcl", "w") as f:
             f.write(f"read_lef {step.config['TECH_LEFS']['nom_*']}\n")
-            lib = step.config["LIB"]["*_tt_025C_1v80"][0]
+            lib = step.config["CELL_LIBS"]["*_tt_025C_1v80"][0]
             f.write(f"read_liberty {lib}\n")
             for lef in step.config["CELL_LEFS"]:
                 f.write(f"read_lef {lef}\n")
