@@ -44,7 +44,7 @@ def handle(step):
                 open("run_sta.tcl.tpl")
                 .read()
                 .format(
-                    lib=step.config["LIB"]["*_tt_025C_1v80"][0],
+                    lib=step.config["CELL_LIBS"]["*_tt_025C_1v80"][0],
                     nl=step.state_out["nl"],
                     spef_file=spef_file,
                     corner=corner,
