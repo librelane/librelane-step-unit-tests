@@ -24,12 +24,12 @@
     ],
     "FP_CONTEXT_DEF": null,
     "VDD_NETS": null,
-    "SYNTH_MUX4_MAP": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/mux4_map.v",
+    "SYNTH_MUX4_MAP": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/mux4_map.v",
     "SYNTH_SIZING": false,
     "EXTRA_SPICE_MODELS": null,
-    "SYNTH_EXCLUSION_CELL_LIST": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/no_synth.cells",
+    "SYNTH_EXCLUSION_CELL_LIST": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/no_synth.cells",
     "FP_IO_HLAYER": "met3",
-    "SYNTH_LATCH_MAP": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/latch_map.v",
+    "SYNTH_LATCH_MAP": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/latch_map.v",
     "GPIO_PADS_LEF": [
         "pdk_dir::libs.ref/sky130_fd_io/lef/sky130_fd_io.lef",
         "pdk_dir::libs.ref/sky130_fd_io/lef/sky130_ef_io.lef"
@@ -44,7 +44,7 @@
     "SYNTH_TIEHI_CELL": "sky130_fd_sc_hd__conb_1/HI",
     "RT_MIN_LAYER": "met1",
     "SYNTH_DRIVING_CELL": "sky130_fd_sc_hd__inv_2/Y",
-    "PNR_EXCLUSION_CELL_LIST": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/drc_exclude.cells",
+    "PNR_EXCLUSION_CELL_LIST": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/drc_exclude.cells",
     "CELL_SPICE_MODELS": [
         "pdk_dir::libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__decap_12.spice",
         "pdk_dir::libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_12.spice",
@@ -52,7 +52,7 @@
         "pdk_dir::libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_8.spice",
         "pdk_dir::libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice"
     ],
-    "FP_TRACKS_INFO": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/tracks.info",
+    "FP_TRACKS_INFO": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/tracks.info",
     "RT_MAX_LAYER": "met5",
     "DIE_AREA": null,
     "GRT_LAYER_ADJUSTMENTS": [
@@ -68,7 +68,7 @@
         "pdk_dir::libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v"
     ],
     "LVS_INSERT_POWER_PINS": true,
-    "SYNTH_FA_MAP": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/fa_map.v",
+    "SYNTH_FA_MAP": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/fa_map.v",
     "CLOCK_UNCERTAINTY_CONSTRAINT": 0.25,
     "SCL_GROUND_PINS": [
         "VGND",
@@ -90,11 +90,11 @@
     "FP_ENDCAP_CELL": "sky130_fd_sc_hd__decap_3",
     "DPL_CELL_PADDING": 0,
     "FP_WELLTAP_CELL": "sky130_fd_sc_hd__tapvpwrvgnd_1",
-    "SYNTH_TRISTATE_MAP": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v",
+    "SYNTH_TRISTATE_MAP": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/tribuff_map.v",
     "GPL_CELL_PADDING": 0,
     "GPIO_PADS_LEF_CORE_SIDE": [
-        "pdk_dir::libs.tech/openlane/custom_cells/lef/sky130_fd_io_core.lef",
-        "pdk_dir::libs.tech/openlane/custom_cells/lef/sky130_ef_io_core.lef"
+        "pdk_dir::libs.tech/librelane/custom_cells/lef/sky130_fd_io_core.lef",
+        "pdk_dir::libs.tech/librelane/custom_cells/lef/sky130_ef_io_core.lef"
     ],
     "CLOCK_PERIOD": 10,
     "SYNTH_CLK_DRIVING_CELL": null,
@@ -126,8 +126,8 @@
     "VERILOG_INCLUDE_DIRS": null,
     "EXTRA_VERILOG_MODELS": null,
     "CTS_ROOT_BUFFER": "sky130_fd_sc_hd__clkbuf_16",
-    "SYNTH_MUX_MAP": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/mux2_map.v",
-    "SYNTH_RCA_MAP": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/rca_map.v",
+    "SYNTH_MUX_MAP": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/mux2_map.v",
+    "SYNTH_RCA_MAP": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/rca_map.v",
     "CELL_GDS": [
         "pdk_dir::libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds"
     ],
@@ -194,7 +194,7 @@
     "SYNTH_NO_FLAT": false,
     "LEC_ENABLE": false,
     "SYNTH_ABC_BUFFERING": true,
-    "SYNTH_CSA_MAP": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/csa_map.v",
+    "SYNTH_CSA_MAP": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/csa_map.v",
     "meta": {
         "openlane_version": "2.0.0b15",
         "step": "Yosys.Synthesis"

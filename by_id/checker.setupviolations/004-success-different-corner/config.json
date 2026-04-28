@@ -32,7 +32,7 @@
   ],
   "MAX_TRANSITION_CONSTRAINT": 0.75,
   "SYNTH_CLK_DRIVING_CELL": null,
-  "PNR_EXCLUSION_CELL_LIST": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/drc_exclude.cells",
+  "PNR_EXCLUSION_CELL_LIST": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/drc_exclude.cells",
   "SCL_GROUND_PINS": ["VGND", "VNB"],
   "FP_CONTEXT_DEF": null,
   "CELL_PAD_EXCLUDE": [
@@ -62,8 +62,8 @@
   ],
   "STD_CELL_LIBRARY": "sky130_fd_sc_hd",
   "GPIO_PADS_LEF_CORE_SIDE": [
-    "pdk_dir::libs.tech/openlane/custom_cells/lef/sky130_fd_io_core.lef",
-    "pdk_dir::libs.tech/openlane/custom_cells/lef/sky130_ef_io_core.lef"
+    "pdk_dir::libs.tech/librelane/custom_cells/lef/sky130_fd_io_core.lef",
+    "pdk_dir::libs.tech/librelane/custom_cells/lef/sky130_ef_io_core.lef"
   ],
   "EXTRA_VERILOG_MODELS": null,
   "FILL_CELL": ["sky130_fd_sc_hd__fill*"],
@@ -83,7 +83,7 @@
   "CELL_GDS": ["pdk_dir::libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds"],
   "GRT_LAYER_ADJUSTMENTS": [0.99, 0, 0, 0, 0, 0],
   "DIE_AREA": null,
-  "SYNTH_EXCLUSION_CELL_LIST": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/no_synth.cells",
+  "SYNTH_EXCLUSION_CELL_LIST": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/no_synth.cells",
   "GPIO_PADS_LEF": [
     "pdk_dir::libs.ref/sky130_fd_io/lef/sky130_fd_io.lef",
     "pdk_dir::libs.ref/sky130_fd_io/lef/sky130_ef_io.lef"
@@ -110,7 +110,7 @@
   "DATA_WIRE_RC_LAYER": "met2",
   "IGNORE_DISCONNECTED_MODULES": ["sky130_fd_sc_hd__conb_1"],
   "TIME_DERATING_CONSTRAINT": 5,
-  "FP_TRACKS_INFO": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/tracks.info",
+  "FP_TRACKS_INFO": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/tracks.info",
   "STA_CORNERS": [
     "nom_tt_025C_1v80",
     "nom_ss_100C_1v60",
