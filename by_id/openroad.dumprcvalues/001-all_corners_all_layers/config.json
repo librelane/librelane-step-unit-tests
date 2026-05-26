@@ -168,7 +168,7 @@
         "max_ss_100C_1v60",
         "min_ff_n40C_1v95"
     ],
-    "PNR_EXCLUDED_CELL_FILE": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/drc_exclude.cells",
+    "PNR_EXCLUDED_CELL_FILE": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/drc_exclude.cells",
     "PNR_SDC_FILE": "./impl.sdc",
     "PRIMARY_GDSII_STREAMOUT_TOOL": "magic",
     "RT_MAX_LAYER": "met5",
@@ -197,7 +197,7 @@
     "SYNTH_BUFFER_CELL": "sky130_fd_sc_hd__buf_2/A/X",
     "SYNTH_CLK_DRIVING_CELL": null,
     "SYNTH_DRIVING_CELL": "sky130_fd_sc_hd__inv_2/Y",
-    "SYNTH_EXCLUDED_CELL_FILE": "pdk_dir::libs.tech/openlane/sky130_fd_sc_hd/no_synth.cells",
+    "SYNTH_EXCLUDED_CELL_FILE": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/no_synth.cells",
     "SYNTH_TIEHI_CELL": "sky130_fd_sc_hd__conb_1/HI",
     "SYNTH_TIELO_CELL": "sky130_fd_sc_hd__conb_1/LO",
     "TECH_LEFS": {
