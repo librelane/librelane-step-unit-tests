@@ -7,7 +7,7 @@
     ],
     "CLOCK_UNCERTAINTY_CONSTRAINT": 0.25,
     "IO_DELAY_CONSTRAINT": 20,
-    "PNR_EXCLUDED_CELL_FILE": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/drc_exclude.cells",
+    "PNR_EXCLUDED_CELL_FILE": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/pnr_excluded.cells",
     "EXTRA_GDS_FILES": null,
     "STA_CORNERS": [
         "nom_tt_025C_1v80",
@@ -30,7 +30,7 @@
         "VPWR",
         "VPB"
     ],
-    "SYNTH_EXCLUDED_CELL_FILE": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/no_synth.cells",
+    "SYNTH_EXCLUDED_CELL_FILE": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/synth_excluded.cells",
     "EXTRA_SPICE_MODELS": null,
     "VDD_PIN_VOLTAGE": 1.8,
     "SCL_GROUND_PINS": [
