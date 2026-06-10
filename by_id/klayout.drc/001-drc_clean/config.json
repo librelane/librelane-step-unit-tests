@@ -41,7 +41,7 @@
         0
     ],
     "EXTRA_LIBS": null,
-    "SYNTH_EXCLUSION_CELL_LIST": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/no_synth.cells",
+    "SYNTH_EXCLUSION_CELL_LIST": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/synth_excluded.cells",
     "SYNTH_CLK_DRIVING_CELL": null,
     "DATA_WIRE_RC_LAYER": "met2",
     "FP_ENDCAP_CELL": "sky130_fd_sc_hd__decap_3",
@@ -176,7 +176,7 @@
         50
     ],
     "GND_PIN": "VGND",
-    "PNR_EXCLUSION_CELL_LIST": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/drc_exclude.cells",
+    "PNR_EXCLUSION_CELL_LIST": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/pnr_excluded.cells",
     "KLAYOUT_TECH": "pdk_dir::libs.tech/klayout/tech/sky130A.lyt",
     "EXTRA_SPICE_MODELS": null,
     "RT_MIN_LAYER": "met1",

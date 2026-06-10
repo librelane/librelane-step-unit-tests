@@ -126,7 +126,7 @@
     "MAX_TRANSITION_CONSTRAINT": 0.75,
     "FP_IO_HLAYER": "met3",
     "CLOCK_NET": null,
-    "SYNTH_EXCLUDED_CELL_FILE": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/no_synth.cells",
+    "SYNTH_EXCLUDED_CELL_FILE": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/synth_excluded.cells",
     "GRT_ANTENNA_ITERS": 3,
     "STA_CORNERS": [
         "nom_tt_025C_1v80",
@@ -164,7 +164,7 @@
     "DIODE_PADDING": null,
     "VDD_PIN": "VPWR",
     "EXTRA_SPICE_MODELS": null,
-    "PNR_EXCLUDED_CELL_FILE": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/drc_exclude.cells",
+    "PNR_EXCLUDED_CELL_FILE": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/pnr_excluded.cells",
     "PLACE_SITE": "unithd",
     "FILL_CELL": [
         "sky130_fd_sc_hd__fill*"

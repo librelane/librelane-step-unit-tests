@@ -9,7 +9,7 @@
     "sky130_ef_sc_hd__decap*",
     "sky130_fd_sc_hd__fill*"
   ],
-  "PNR_EXCLUDED_CELL_FILE": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/drc_exclude.cells",
+  "PNR_EXCLUDED_CELL_FILE": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/pnr_excluded.cells",
   "WIRE_LENGTH_THRESHOLD": null,
   "FP_IO_HLAYER": "met3",
   "VDD_NETS": null,
@@ -106,7 +106,7 @@
   "FILL_CELL": ["sky130_fd_sc_hd__fill*"],
   "MAX_SLEW_VIOLATION_CORNERS": [""],
   "DEFAULT_CORNER": "nom_tt_025C_1v80",
-  "SYNTH_EXCLUDED_CELL_FILE": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/no_synth.cells",
+  "SYNTH_EXCLUDED_CELL_FILE": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/synth_excluded.cells",
   "GPIO_PAD_CELLS": ["sky130_fd_io*", "sky130_ef_io*"],
   "TIMING_VIOLATION_CORNERS": ["*tt*"],
   "DECAP_CELL": [

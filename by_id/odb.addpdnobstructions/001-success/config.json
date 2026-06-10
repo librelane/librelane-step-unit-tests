@@ -121,7 +121,7 @@
         "pdk_dir::libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd__blackbox_pp.v"
     ],
     "DEFAULT_MAX_TRAN": null,
-    "PNR_EXCLUSION_CELL_LIST": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/drc_exclude.cells",
+    "PNR_EXCLUSION_CELL_LIST": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/pnr_excluded.cells",
     "CLOCK_NET": null,
     "DIODE_CELL": "sky130_fd_sc_hd__diode_2/DIODE",
     "CELL_SPICE_MODELS": [
@@ -140,7 +140,7 @@
     "GPIO_PADS_VERILOG": [
         "pdk_dir::libs.ref/sky130_fd_io/verilog/sky130_ef_io.v"
     ],
-    "SYNTH_EXCLUSION_CELL_LIST": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/no_synth.cells",
+    "SYNTH_EXCLUSION_CELL_LIST": "pdk_dir::libs.tech/librelane/sky130_fd_sc_hd/synth_excluded.cells",
     "DATA_WIRE_RC_LAYER": "met2",
     "FP_ENDCAP_CELL": "sky130_fd_sc_hd__decap_3",
     "IO_DELAY_CONSTRAINT": 20,
