@@ -1,5 +1,5 @@
 def handle(step, exception, caplog, openroad_alerts):
-    assert exception is not None, "Detalied router didn't raise an exception"
+    assert exception is not None, "detailed routing script didn't raise an exception"
     # [ERROR DRT-0155] Guide in net _000_ uses layer met1 (4) that is outside the allowed routing range
     error = "DRT-0155"
     assert error in [
