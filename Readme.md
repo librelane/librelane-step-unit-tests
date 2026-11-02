@@ -1,6 +1,6 @@
 # LibreLane Step Unit Tests
 
-These are per-step unit tests for OpenLane 2.
+These are per-step unit tests for LibreLane.
 
 Check the [LibreLane documentation](https://librelane.readthedocs.io) for more
 info on how this repository is organized- they are stored in a separate
